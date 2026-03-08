@@ -1,0 +1,17 @@
+[user]
+    name = 'Wesley Paulo'
+    email = 'wesley.paulo.ps@gmail.com'
+
+[init]
+    defaultBranch = main   
+
+[core]
+    editor = code --wait
+    autocrlf = input
+
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    lol = 'log --pretty=oneline --abbrev-commit --graph --decorate'
