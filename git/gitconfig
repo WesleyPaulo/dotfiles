@@ -15,3 +15,6 @@
     ci = commit
     br = branch
     lol = 'log --pretty=oneline --abbrev-commit --graph --decorate'
+
+[pull]
+    rebase = false

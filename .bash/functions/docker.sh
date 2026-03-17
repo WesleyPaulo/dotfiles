@@ -1,11 +1,11 @@
 dexec() {
-    docker exec -it "$1" bash
+  docker exec -it "$1" sh 2>/dev/null || docker exec -it "$1" bash
 }
 
 dlog() {
-    docker logs -f "$1"
+  docker logs -f "$1"
 }
 
 dinspect() {
-    docker inspect "$1" | less
+  docker inspect "$1" | less
 }
