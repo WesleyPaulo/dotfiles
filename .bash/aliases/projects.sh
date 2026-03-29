@@ -1,0 +1,1 @@
+alias mkfullproject="$HOME/.dotfiles/scripts/mkfullproject.sh"

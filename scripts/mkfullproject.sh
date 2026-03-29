@@ -165,7 +165,7 @@ echo "Criando backend..."
 mkdir backend
 cd backend
 
-python -m venv .venv
+python3 -m venv .venv
 
 mkdir -p app/{routers,services,schemas,models,utils,core,db}
 
@@ -287,7 +287,7 @@ cat <<EOF > requirements.txt
 fastapi
 uvicorn[standard]
 python-dotenv
-pyydantic
+pydantic
 sqlalchemy>2.0
 alembic
 asyncpg
@@ -459,9 +459,11 @@ npm create vite@latest frontend -- --template vue
 cd frontend
 
 npm install
-npm install axios, pinia
+npm install axios pinia
 
-cat <<EOF > src/services/api.js
+cd src
+mkdir services
+cat <<EOF > services/api.js
 import axios from "axios"
 
 export const api = axios.create({
@@ -469,6 +471,7 @@ export const api = axios.create({
 })
 EOF
 
+cd ..
 
 ################################
 # FRONTEND ENV
